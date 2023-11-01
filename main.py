@@ -1,5 +1,6 @@
 from experta import *
 
+
 class OrientacionVocacional(KnowledgeEngine):
     @DefFacts()
     def hechos_iniciales(self):
@@ -29,6 +30,7 @@ class OrientacionVocacional(KnowledgeEngine):
             print("Podrías considerar una carrera en negocios o administración.")
         else:
             print("Necesitas explorar tus intereses con más detalle para obtener una recomendación precisa.")
+
 
 if __name__ == "__main__":
     engine = OrientacionVocacional()
