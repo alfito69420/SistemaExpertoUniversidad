@@ -10,6 +10,7 @@ class OrientacionVocacional(KnowledgeEngine):
     #   AREA LOGICO-MATEMATICA
     @Rule(Fact(pregunta="logico_matematico"))
     def preguntar_ciencias(self):
+        print("AREA LÓGICO-MATEMÁTICA")
         respuesta = input("¿Te gustan las matemáticas, física o la química? (s/n): ")
         if respuesta.lower() == "s":
             self.declare(Fact(pregunta="ingenieria_sistemas"))
@@ -74,7 +75,8 @@ class OrientacionVocacional(KnowledgeEngine):
     #   AREA HUMANIDADES
     @Rule(Fact(pregunta="humanidades"))
     def preguntar_humanidades(self):
-        respuesta = input("\n¿Te gustaría trabajar con disciplinas relacionadas con "
+        print("\nAREA HUMANIDADES")
+        respuesta = input("¿Te gustaría trabajar con disciplinas relacionadas con "
                           "\nla cultura, la sociedad, la historia, el lenguaje, la filosofía, "
                           "\nla literatura, las artes y otros aspectos de la experiencia humana? (s/n): ")
         if respuesta.lower() == "s":
@@ -152,7 +154,8 @@ class OrientacionVocacional(KnowledgeEngine):
     #   AREA FINANZAS
     @Rule(Fact(pregunta="negocios"))
     def preguntar_negocios(self):
-        respuesta = input("\n¿Te gustaría trabajar en un entorno de Negocios, Economía, "
+        print("\nAREA FINANZAS")
+        respuesta = input("¿Te gustaría trabajar en un entorno de Negocios, Economía, "
                           "Estructura Socioeconómica de México y Contabilidad? (s/n): ")
         if respuesta.lower() == "s":
             print("Podrías considerar una carrera en negocios o administración.")
@@ -162,7 +165,8 @@ class OrientacionVocacional(KnowledgeEngine):
     #   AREA SALUD
     @Rule(Fact(pregunta="salud"))
     def preguntar_salud(self):
-        respuesta = input("\n¿Te gustaría ? (s/n): ")
+        print("\nAREA SALUD")
+        respuesta = input("¿Te gustaría ? (s/n): ")
         if respuesta.lower() == "s":
             print("Podrías considerar una carrera en negocios o administración.")
             # ...
@@ -170,9 +174,11 @@ class OrientacionVocacional(KnowledgeEngine):
             self.declare(Fact(pregunta="artes"))
 
     #   AREA ARTES
+
     @Rule(Fact(pregunta="artes"))
-    def preguntar_negocios(self):
-        respuesta = input("\n¿Te gustaría ? (s/n): ")
+    def preguntar_artes(self):
+        print("\nAREA ARTES")
+        respuesta = input("¿Te gustaría ? (s/n): ")
         if respuesta.lower() == "s":
             print("Podrías considerar una carrera en negocios o administración.")
             # ...
