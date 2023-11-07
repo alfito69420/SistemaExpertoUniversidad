@@ -63,8 +63,7 @@ class OrientacionVocacional(KnowledgeEngine):
     # INGENIERIA MECATRONICA
     @Rule(Fact(pregunta="ingenieria_mecatronica"))
     def ingenieria_mecatronica(self):
-        respuesta = input("\n¿Te interesaría elementos de la ingeniería "
-                          "\nmecánica, la electrónica, la informática y "
+        respuesta = input("\n¿Te interesaría elementos de la ingeniería mecánica, la electrónica, la informática y "
                           "\nla automatización para diseñar y desarrollar sistemas y productos mecatrónicos?  (s/n): ")
         if respuesta.lower() == "s":
             print("Podrías considerar estudiar ingeniería mecatronica.")
@@ -76,9 +75,9 @@ class OrientacionVocacional(KnowledgeEngine):
     @Rule(Fact(pregunta="humanidades"))
     def preguntar_humanidades(self):
         print("\nAREA HUMANIDADES")
-        respuesta = input("¿Te gustaría trabajar con disciplinas relacionadas con "
-                          "\nla cultura, la sociedad, la historia, el lenguaje, la filosofía, "
-                          "\nla literatura, las artes y otros aspectos de la experiencia humana? (s/n): ")
+        respuesta = input(
+            "¿Te gustaría trabajar con disciplinas relacionadas con la cultura, la sociedad, la historia, el lenguaje, la filosofía, "
+            "\nla literatura, las artes y otros aspectos de la experiencia humana? (s/n): ")
         if respuesta.lower() == "s":
             self.declare(Fact(pregunta="lic_historia"))
         else:
@@ -87,9 +86,9 @@ class OrientacionVocacional(KnowledgeEngine):
     #   LICENCIATURA EN HISTORIA
     @Rule(Fact(pregunta="lic_historia"))
     def lic_historia(self):
-        respuesta = input("\n¿Te interesaría explorar eventos históricos, "
-                          "\nculturas, sociedades y tendencias, y desarrollar "
-                          "\nhabilidades de investigación, análisis y comunicación? (s/n): ")
+        respuesta = input(
+            "\n¿Te interesaría explorar eventos históricos, culturas, sociedades y tendencias, y desarrollar "
+            "\nhabilidades de investigación, análisis y comunicación? (s/n): ")
         if respuesta.lower() == "s":
             print("Podrías considerar una licenciatura en historia.")
         else:
@@ -98,9 +97,9 @@ class OrientacionVocacional(KnowledgeEngine):
     #   LICENCIATURA EN FILOSOFIA
     @Rule(Fact(pregunta="lic_filosofia"))
     def lic_filosofia(self):
-        respuesta = input("\n¿Te interesaría explorar cuestiones fundamentales "
-                          "\nsobre la existencia, el conocimiento, la moral, "
-                          "\nla lógica, la mente, la realidad y muchos otros temas abstractos? (s/n): ")
+        respuesta = input(
+            "\n¿Te interesaría explorar cuestiones fundamentales sobre la existencia, el conocimiento, la moral, "
+            "\nla lógica, la mente, la realidad y muchos otros temas abstractos? (s/n): ")
         if respuesta.lower() == "s":
             print("Podrías considerar una licenciatura en filosofía.")
         else:
@@ -109,9 +108,8 @@ class OrientacionVocacional(KnowledgeEngine):
     #   LICENCIATURA EN SOCIOLOGIA
     @Rule(Fact(pregunta="lic_sociologia"))
     def lic_sociologia(self):
-        respuesta = input("\n¿Te interesaría estudiar temas investigan cómo funcionan "
-                          "\nlas sociedades, cómo se desarrollan, cómo se organizan "
-                          "\ny cómo influyen en la vida de las personas? (s/n): ")
+        respuesta = input("\n¿Te interesaría estudiar temas investigan cómo funcionan las sociedades, "
+                          "\ncómo se desarrollan, cómo se organizan y cómo influyen en la vida de las personas? (s/n): ")
         if respuesta.lower() == "s":
             print("Podrías considerar una licenciatura en sociología.")
         else:
@@ -120,9 +118,8 @@ class OrientacionVocacional(KnowledgeEngine):
     #   LICENCIATURA EN ANTROPOLOGIA
     @Rule(Fact(pregunta="lic_antropologia"))
     def lic_antropologia(self):
-        respuesta = input("\n¿T einteresaria investigar y analizar sobre las culturas, "
-                          "\nlas sociedades, la evolución humana, el comportamiento humano"
-                          "\n y las interacciones entre las personas y su entorno? (s/n): ")
+        respuesta = input("\n¿Te interesaria investigar y analizar sobre las culturas, las sociedades, la evolución "
+                          "\nhumana, el comportamiento humano y las interacciones entre las personas y su entorno? (s/n): ")
         if respuesta.lower() == "s":
             print("Podrías considerar una licenciatura en antropología.")
         else:
@@ -131,10 +128,8 @@ class OrientacionVocacional(KnowledgeEngine):
     #   LICENCIATURA EN COMUNICACION
     @Rule(Fact(pregunta="lic_comunicacion"))
     def lic_comunicacion(self):
-        respuesta = input("\n¿Te interesaria trabajar con los procesos "
-                          "\nde comunicación, la producción y difusión de "
-                          "\ninformación, y la interacción entre individuos, "
-                          "\ngrupos y organizaciones en contextos mediáticos y sociales? (s/n): ")
+        respuesta = input("\n¿Te interesaria trabajar con los procesos de comunicación, la producción y difusión de "
+                          "\ninformación, y la interacción entre individuos, grupos y organizaciones en contextos mediáticos y sociales? (s/n): ")
         if respuesta.lower() == "s":
             print("Podrías considerar una licenciatura en comunicación.")
         else:
@@ -143,9 +138,9 @@ class OrientacionVocacional(KnowledgeEngine):
     #   LICENCIATURA EN EDUCACION
     @Rule(Fact(pregunta="lic_educacion"))
     def lic_educacion(self):
-        respuesta = input("\n¿Te interesaría desempeñar roles en la dirección "
-                          "\nescolar, el diseño de currículos, la asesoría "
-                          "\neducativa, la formación de docentes y la investigación educativa? (s/n): ")
+        respuesta = input(
+            "\n¿Te interesaría desempeñar roles en la dirección escolar, el diseño de currículos, la asesoría "
+            "\neducativa, la formación de docentes y la investigación educativa? (s/n): ")
         if respuesta.lower() == "s":
             print("Podrías considerar una licenciatura en educación.")
         else:
@@ -158,7 +153,67 @@ class OrientacionVocacional(KnowledgeEngine):
         respuesta = input("¿Te gustaría trabajar en un entorno de Negocios, Economía, "
                           "Estructura Socioeconómica de México y Contabilidad? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en negocios o administración.")
+            self.declare(Fact(pregunta="admin_empresas"))
+        else:
+            self.declare(Fact(pregunta="salud"))
+
+    #   ADMISNITRACIÓN DE EMPRESAS
+    @Rule(Fact(pregunta="admin_empresas"))
+    def admin_empresas(self):
+        respuesta = input("\n¿Te interesaría gestionar y liderar organizaciones y empresas de manera efectiva? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en Admnitración de empresas")
+        else:
+            self.declare(Fact(pregunta="finanzas"))
+
+    #   FINANZAS
+    @Rule(Fact(pregunta="finanzas"))
+    def finanzas(self):
+        respuesta = input("\n¿Te interesaría centrarte en estudio y la gestión de los aspectos financieros de las organizaciones y las inversiones? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en Finanzas")
+        else:
+            self.declare(Fact(pregunta="contabilidad"))
+
+    #   CONTABILIDAD
+    @Rule(Fact(pregunta="contabilidad"))
+    def contabilidad(self):
+        respuesta = input("\n¿Te interesaría centrarte en la recopilación, el registro, la interpretación y "
+                          "\nel análisis de información financiera para ayudar a las organizaciones a tomar "
+                          "\ndecisiones informadas sobre sus operaciones económicas? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en Contabilidad")
+        else:
+            self.declare(Fact(pregunta="economia"))
+
+    #   ECONOMÍA
+    @Rule(Fact(pregunta="economia"))
+    def economia(self):
+        respuesta = input("\n¿Te interesaría centrarte centra en el estudio de cómo las sociedades asignan "
+                          "\nrecursos escasos para satisfacer las necesidades y deseos humanos? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en Economía")
+        else:
+            self.declare(Fact(pregunta="marketing"))
+
+    #   MARKETING
+    @Rule(Fact(pregunta="marketing"))
+    def marketing(self):
+        respuesta = input("\n¿Te interesaría enfocarte enfoca en el estudio y la aplicación de estrategias y "
+                          "\ntécnicas para promover productos, servicios o ideas a un público objetivo con el "
+                          "\nobjetivo de satisfacer las necesidades del mercado y generar valor para las empresas u organizaciones.? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en Marketing")
+        else:
+            self.declare(Fact(pregunta="comercio_int"))
+
+    #   COMERCIO INTERNACIONAL
+    @Rule(Fact(pregunta="comercio_int"))
+    def comercio_int(self):
+        respuesta = input("\n¿Te interesaría estudiar la gestión de las transacciones comerciales internacionales, "
+                          "\nincluyendo la importación, exportación y distribución de bienes y servicios en un contexto global? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en Comercio Internacional")
         else:
             self.declare(Fact(pregunta="salud"))
 
@@ -174,7 +229,6 @@ class OrientacionVocacional(KnowledgeEngine):
             self.declare(Fact(pregunta="artes"))
 
     #   AREA ARTES
-
     @Rule(Fact(pregunta="artes"))
     def preguntar_artes(self):
         print("\nAREA ARTES")
