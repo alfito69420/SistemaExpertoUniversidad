@@ -23,7 +23,7 @@ class OrientacionVocacional(KnowledgeEngine):
         respuesta = input("\n¿Tienes interés en el diseño, desarrollo, implementación y gestión "
                           "\nde sistemas de información y tecnología de la información?  (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar estudiar ingeniería en sistemas computacionales.")
+            print("\nPodrías considerar estudiar ingeniería en sistemas computacionales.")
         else:
             self.declare(Fact(pregunta="ingenieria_bioquimica"))
 
@@ -33,7 +33,7 @@ class OrientacionVocacional(KnowledgeEngine):
         respuesta = input("\n¿Te interesaría desarrollar y aplicar procesos, productos y "
                           "\ntecnologías relacionadas con organismos vivos y biomoléculas?  (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar estudiar ingeniería en quimica.")
+            print("\nPodrías considerar estudiar ingeniería en quimica.")
         else:
             self.declare(Fact(pregunta="ingenieria_industrial"))
 
@@ -44,7 +44,7 @@ class OrientacionVocacional(KnowledgeEngine):
                           "\ncon el objetivo de aumentar la eficiencia, la calidad, la productividad "
                           "\ny la rentabilidad en una amplia variedad de industrias y organizaciones?  (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar estudiar ingeniería industrial.")
+            print("\nPodrías considerar estudiar ingeniería industrial.")
             # self.declare(Fact(pregunta="ingenieria"))
         else:
             self.declare(Fact(pregunta="ingenieria_mecanica"))
@@ -55,7 +55,7 @@ class OrientacionVocacional(KnowledgeEngine):
         respuesta = input("\n¿Te interesa el diseño, análisis, fabricación y "
                           "\nmantenimiento de sistemas y componentes mecánicos.?  (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar estudiar ingeniería mecanica.")
+            print("\nPodrías considerar estudiar ingeniería mecanica.")
             # self.declare(Fact(pregunta="ingenieria"))
         else:
             self.declare(Fact(pregunta="ingenieria_mecatronica"))
@@ -66,7 +66,7 @@ class OrientacionVocacional(KnowledgeEngine):
         respuesta = input("\n¿Te interesaría elementos de la ingeniería mecánica, la electrónica, la informática y "
                           "\nla automatización para diseñar y desarrollar sistemas y productos mecatrónicos?  (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar estudiar ingeniería mecatronica.")
+            print("\nPodrías considerar estudiar ingeniería mecatronica.")
             # self.declare(Fact(pregunta="ingenieria"))
         else:
             self.declare(Fact(pregunta="humanidades"))
@@ -90,7 +90,7 @@ class OrientacionVocacional(KnowledgeEngine):
             "\n¿Te interesaría explorar eventos históricos, culturas, sociedades y tendencias, y desarrollar "
             "\nhabilidades de investigación, análisis y comunicación? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una licenciatura en historia.")
+            print("\nPodrías considerar una licenciatura en historia.")
         else:
             self.declare(Fact(pregunta="lic_filosofia"))
 
@@ -101,7 +101,7 @@ class OrientacionVocacional(KnowledgeEngine):
             "\n¿Te interesaría explorar cuestiones fundamentales sobre la existencia, el conocimiento, la moral, "
             "\nla lógica, la mente, la realidad y muchos otros temas abstractos? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una licenciatura en filosofía.")
+            print("\nPodrías considerar una licenciatura en filosofía.")
         else:
             self.declare(Fact(pregunta="lic_sociologia"))
 
@@ -111,7 +111,7 @@ class OrientacionVocacional(KnowledgeEngine):
         respuesta = input("\n¿Te interesaría estudiar temas investigan cómo funcionan las sociedades, "
                           "\ncómo se desarrollan, cómo se organizan y cómo influyen en la vida de las personas? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una licenciatura en sociología.")
+            print("\nPodrías considerar una licenciatura en sociología.")
         else:
             self.declare(Fact(pregunta="lic_antropologia"))
 
@@ -121,7 +121,7 @@ class OrientacionVocacional(KnowledgeEngine):
         respuesta = input("\n¿Te interesaria investigar y analizar sobre las culturas, las sociedades, la evolución "
                           "\nhumana, el comportamiento humano y las interacciones entre las personas y su entorno? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una licenciatura en antropología.")
+            print("\nPodrías considerar una licenciatura en antropología.")
         else:
             self.declare(Fact(pregunta="lic_comunicacion"))
 
@@ -131,7 +131,7 @@ class OrientacionVocacional(KnowledgeEngine):
         respuesta = input("\n¿Te interesaria trabajar con los procesos de comunicación, la producción y difusión de "
                           "\ninformación, y la interacción entre individuos, grupos y organizaciones en contextos mediáticos y sociales? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una licenciatura en comunicación.")
+            print("\nPodrías considerar una licenciatura en comunicación.")
         else:
             self.declare(Fact(pregunta="lic_educacion"))
 
@@ -142,7 +142,7 @@ class OrientacionVocacional(KnowledgeEngine):
             "\n¿Te interesaría desempeñar roles en la dirección escolar, el diseño de currículos, la asesoría "
             "\neducativa, la formación de docentes y la investigación educativa? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una licenciatura en educación.")
+            print("\nPodrías considerar una licenciatura en educación.")
         else:
             self.declare(Fact(pregunta="negocios"))
 
@@ -162,7 +162,7 @@ class OrientacionVocacional(KnowledgeEngine):
     def admin_empresas(self):
         respuesta = input("\n¿Te interesaría gestionar y liderar organizaciones y empresas de manera efectiva? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en Admnitración de empresas")
+            print("\nPodrías considerar una carrera en Admnitración de empresas")
         else:
             self.declare(Fact(pregunta="finanzas"))
 
@@ -172,7 +172,7 @@ class OrientacionVocacional(KnowledgeEngine):
         respuesta = input(
             "\n¿Te interesaría centrarte en estudio y la gestión de los aspectos financieros de las organizaciones y las inversiones? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en Finanzas")
+            print("\nPodrías considerar una carrera en Finanzas")
         else:
             self.declare(Fact(pregunta="contabilidad"))
 
@@ -183,7 +183,7 @@ class OrientacionVocacional(KnowledgeEngine):
                           "\nel análisis de información financiera para ayudar a las organizaciones a tomar "
                           "\ndecisiones informadas sobre sus operaciones económicas? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en Contabilidad")
+            print("\nPodrías considerar una carrera en Contabilidad")
         else:
             self.declare(Fact(pregunta="economia"))
 
@@ -193,7 +193,7 @@ class OrientacionVocacional(KnowledgeEngine):
         respuesta = input("\n¿Te interesaría centrarte centra en el estudio de cómo las sociedades asignan "
                           "\nrecursos escasos para satisfacer las necesidades y deseos humanos? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en Economía")
+            print("\nPodrías considerar una carrera en Economía")
         else:
             self.declare(Fact(pregunta="marketing"))
 
@@ -204,7 +204,7 @@ class OrientacionVocacional(KnowledgeEngine):
                           "\ntécnicas para promover productos, servicios o ideas a un público objetivo con el "
                           "\nobjetivo de satisfacer las necesidades del mercado y generar valor para las empresas u organizaciones.? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en Marketing")
+            print("\nPodrías considerar una carrera en Marketing")
         else:
             self.declare(Fact(pregunta="comercio_int"))
 
@@ -214,7 +214,7 @@ class OrientacionVocacional(KnowledgeEngine):
         respuesta = input("\n¿Te interesaría estudiar la gestión de las transacciones comerciales internacionales, "
                           "\nincluyendo la importación, exportación y distribución de bienes y servicios en un contexto global? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en Comercio Internacional")
+            print("\nPodrías considerar una carrera en Comercio Internacional")
         else:
             self.declare(Fact(pregunta="salud"))
 
@@ -236,7 +236,7 @@ class OrientacionVocacional(KnowledgeEngine):
         respuesta = input("\n¿Te gustaria adquirir conocimientos y habilidades clínicas necesarios para "
                           "\ndiagnosticar, tratar y prevenir enfermedades, así como para cuidar y mejorar la salud de los pacientes.? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en medicina")
+            print("\nPodrías considerar una carrera en medicina")
         else:
             self.declare(Fact(pregunta="enfermeria"))
 
@@ -247,7 +247,7 @@ class OrientacionVocacional(KnowledgeEngine):
                           "\nbrindando cuidados compasivos, coordinando tratamientos, y promoviendo la "
                           "\nrecuperación y el bienestar de los pacientes en diversas áreas de la atención médica.? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en enfermeria")
+            print("\nPodrías considerar una carrera en enfermeria")
         else:
             self.declare(Fact(pregunta="fisioterapia"))
 
@@ -258,7 +258,7 @@ class OrientacionVocacional(KnowledgeEngine):
                           "\n para rehabilitar y mejorar la movilidad, función y calidad de vida de los "
                           "\npacientes, abordando una variedad de condiciones médicas y lesiones.? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en fisioterapia")
+            print("\nPodrías considerar una carrera en fisioterapia")
         else:
             self.declare(Fact(pregunta="psi_clinica"))
 
@@ -269,7 +269,7 @@ class OrientacionVocacional(KnowledgeEngine):
                           "\nindividuos, utilizando enfoques terapéuticos para abordar aspectos emocionales "
                           "\ny mentales, y contribuyendo al bienestar mental y emocional de los pacientes.? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en psicologia clinica")
+            print("\nPodrías considerar una carrera en psicologia clinica")
         else:
             self.declare(Fact(pregunta="nutricion"))
 
@@ -281,7 +281,7 @@ class OrientacionVocacional(KnowledgeEngine):
                           "\ny abordar las dimensiones psicológicas asociadas con los hábitos alimentarios, "
                           "\npromoviendo así un enfoque integral para la salud y el bienestar? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en nutricion")
+            print("\nPodrías considerar una carrera en nutricion")
         else:
             self.declare(Fact(pregunta="odontologia"))
 
@@ -301,56 +301,62 @@ class OrientacionVocacional(KnowledgeEngine):
     @Rule(Fact(pregunta="artes"))
     def preguntar_artes(self):
         print("\nAREA ARTES")
-        respuesta = input("¿Te gustaría ? (s/n): ")
+        respuesta = input("¿Te gustaría estudiar alguna disciplina creativa que se centre en la expresión "
+                          "\nartística y la comunicación visual? (s/n): ")
         if respuesta.lower() == "s":
-            self.declare(Fact(pregunta=""))
+            self.declare(Fact(pregunta="artes_visuales"))
         else:
-            print("Necesitas explorar tus intereses con más detalle para obtener una recomendación precisa.")
+            print("\nNecesitas explorar tus intereses con más detalle para obtener una recomendación precisa.")
 
-    #
-    @Rule(Fact(pregunta=""))
-    def preguntar_artes(self):
-        respuesta = input("¿Te gustaría ? (s/n): ")
+    #   ARTES VISUALES
+    @Rule(Fact(pregunta="artes_visuales"))
+    def artes_visuales(self):
+        respuesta = input("\n¿Te gustaría desembolverte en un disciplina artística que se centra en la creación "
+                          "\nvisual y la expresión artística a través de diversas formas, como pintura, "
+                          "\nescultura, grabado, fotografía y otras modalidades visuales.? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en odontologia")
+            print("\nPodrías considerar una carrera en artes visuales")
         else:
-            self.declare(Fact(pregunta=""))
+            self.declare(Fact(pregunta="interpretacion_musical"))
 
-    #
-    @Rule(Fact(pregunta=""))
-    def preguntar_artes(self):
-        respuesta = input("¿Te gustaría ? (s/n): ")
+    #   INTERPRETACION MUSICAL
+    @Rule(Fact(pregunta="interpretacion_musical"))
+    def interpretacion_musical(self):
+        respuesta = input("\n¿Te gustaría ser capacitado en la ejecución de instrumentos musicales o el canto, "
+                          "\ncon un enfoque particular en la interpretación artística y la expresión musical? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en ")
+            print("\nPodrías considerar una carrera en interpretacion musical")
         else:
-            self.declare(Fact(pregunta=""))
+            self.declare(Fact(pregunta="artes_digitales"))
 
-    #
-    @Rule(Fact(pregunta=""))
-    def preguntar_artes(self):
-        respuesta = input("¿Te gustaría ? (s/n): ")
+    #   ARTES DIGITALES
+    @Rule(Fact(pregunta="artes_digitales"))
+    def artes_digitales(self):
+        respuesta = input("\n¿Te gustaría explorar nuevas formas de expresión visual en el mundo digital? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en ")
+            print("\nPodrías considerar una carrera en artes digitales")
         else:
-            self.declare(Fact(pregunta=""))
+            self.declare(Fact(pregunta="hist_arte"))
 
-    #
-    @Rule(Fact(pregunta=""))
-    def preguntar_artes(self):
-        respuesta = input("¿Te gustaría ? (s/n): ")
+    #   HISTORIA DEL ARTE
+    @Rule(Fact(pregunta="hist_arte"))
+    def hist_arte(self):
+        respuesta = input("\n¿Te gustaría enfocarte en el estudio y análisis de las manifestaciones artísticas a "
+                          "\nlo largo de la historia, abarcando diversas culturas, estilos y períodos? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en ")
+            print("\nPodrías considerar una carrera en historia del arte")
         else:
-            self.declare(Fact(pregunta=""))
+            self.declare(Fact(pregunta="arquitectura"))
 
-    #
-    @Rule(Fact(pregunta=""))
-    def preguntar_artes(self):
-        respuesta = input("¿Te gustaría ? (s/n): ")
+    #   ARQUITECTURA
+    @Rule(Fact(pregunta="arquitectura"))
+    def arquitectura(self):
+        respuesta = input("\n¿Te gustaría estudiar una disciplina que combina creatividad, diseño, tecnología y "
+                          "\nconocimientos técnicos para planificar, diseñar y construir espacios arquitectónicos? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en ")
+            print("\nPodrías considerar una carrera en arquitectura")
         else:
-            print("Necesitas explorar tus intereses con más detalle para obtener una recomendación precisa.")
+            print("\nNecesitas explorar tus intereses con más detalle para obtener una recomendación precisa.")
 
 
 if __name__ == "__main__":
