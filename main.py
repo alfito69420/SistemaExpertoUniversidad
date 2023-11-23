@@ -169,7 +169,8 @@ class OrientacionVocacional(KnowledgeEngine):
     #   FINANZAS
     @Rule(Fact(pregunta="finanzas"))
     def finanzas(self):
-        respuesta = input("\n¿Te interesaría centrarte en estudio y la gestión de los aspectos financieros de las organizaciones y las inversiones? (s/n): ")
+        respuesta = input(
+            "\n¿Te interesaría centrarte en estudio y la gestión de los aspectos financieros de las organizaciones y las inversiones? (s/n): ")
         if respuesta.lower() == "s":
             print("Podrías considerar una carrera en Finanzas")
         else:
@@ -221,10 +222,78 @@ class OrientacionVocacional(KnowledgeEngine):
     @Rule(Fact(pregunta="salud"))
     def preguntar_salud(self):
         print("\nAREA SALUD")
-        respuesta = input("¿Te gustaría ? (s/n): ")
+        respuesta = input("¿Te gustaría trabajar en disciplinas dedicadas al mantenimiento, diagnóstico, tratamiento "
+                          "\ny promoción del bienestar físico, mental y social de los individuos? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en negocios o administración.")
+            self.declare(Fact(pregunta="medicina"))
             # ...
+        else:
+            self.declare(Fact(pregunta="artes"))
+
+    #   MEDICINA
+    @Rule(Fact(pregunta="medicina"))
+    def medicina(self):
+        respuesta = input("\n¿Te gustaria adquirir conocimientos y habilidades clínicas necesarios para "
+                          "\ndiagnosticar, tratar y prevenir enfermedades, así como para cuidar y mejorar la salud de los pacientes.? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en medicina")
+        else:
+            self.declare(Fact(pregunta="enfermeria"))
+
+    #   ENFERMERIA
+    @Rule(Fact(pregunta="enfermeria"))
+    def enfermeria(self):
+        respuesta = input("\n¿Te gustaria  desempeñar un papel fundamental en la atención de la salud, "
+                          "\nbrindando cuidados compasivos, coordinando tratamientos, y promoviendo la "
+                          "\nrecuperación y el bienestar de los pacientes en diversas áreas de la atención médica.? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en enfermeria")
+        else:
+            self.declare(Fact(pregunta="fisioterapia"))
+
+    #   FISIOTERAPIA
+    @Rule(Fact(pregunta="fisioterapia"))
+    def fisioterapia(self):
+        respuesta = input("\n¿Te gustaria ser un experto en el manejo de técnicas terapéuticas y ejercicios"
+                          "\n para rehabilitar y mejorar la movilidad, función y calidad de vida de los "
+                          "\npacientes, abordando una variedad de condiciones médicas y lesiones.? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en fisioterapia")
+        else:
+            self.declare(Fact(pregunta="psi_clinica"))
+
+    #   PSICOLOGIA CLINICA
+    @Rule(Fact(pregunta="psi_clinica"))
+    def psi_clinica(self):
+        respuesta = input("\n¿Te gustaria evaluar, diagnosticar y proporcionar tratamiento psicológico a "
+                          "\nindividuos, utilizando enfoques terapéuticos para abordar aspectos emocionales "
+                          "\ny mentales, y contribuyendo al bienestar mental y emocional de los pacientes.? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en psicologia clinica")
+        else:
+            self.declare(Fact(pregunta="nutricion"))
+
+    #   NUTRICION
+    @Rule(Fact(pregunta="nutricion"))
+    def nutricion(self):
+        respuesta = input("\n¿Te interesaria estudiar una carrera que se centra en la interrelación entre la "
+                          "\nalimentación y la salud mental, capacitando a los profesionales para comprender "
+                          "\ny abordar las dimensiones psicológicas asociadas con los hábitos alimentarios, "
+                          "\npromoviendo así un enfoque integral para la salud y el bienestar? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en nutricion")
+        else:
+            self.declare(Fact(pregunta="odontologia"))
+
+    #   ODONTOLOGIA
+    @Rule(Fact(pregunta="odontologia"))
+    def odontologia(self):
+        respuesta = input("\n¿T einteresaria profundizar en la comprensión de los aspectos psicológicos "
+                          "\nrelacionados con la atención dental, capacitando a los profesionales para abordar "
+                          "\nlas necesidades emocionales de los pacientes, promoviendo una experiencia "
+                          "\nodontológica positiva y contribuyendo a la salud bucal integral.? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en odontologia")
         else:
             self.declare(Fact(pregunta="artes"))
 
@@ -234,8 +303,52 @@ class OrientacionVocacional(KnowledgeEngine):
         print("\nAREA ARTES")
         respuesta = input("¿Te gustaría ? (s/n): ")
         if respuesta.lower() == "s":
-            print("Podrías considerar una carrera en negocios o administración.")
-            # ...
+            self.declare(Fact(pregunta=""))
+        else:
+            print("Necesitas explorar tus intereses con más detalle para obtener una recomendación precisa.")
+
+    #
+    @Rule(Fact(pregunta=""))
+    def preguntar_artes(self):
+        respuesta = input("¿Te gustaría ? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en odontologia")
+        else:
+            self.declare(Fact(pregunta=""))
+
+    #
+    @Rule(Fact(pregunta=""))
+    def preguntar_artes(self):
+        respuesta = input("¿Te gustaría ? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en ")
+        else:
+            self.declare(Fact(pregunta=""))
+
+    #
+    @Rule(Fact(pregunta=""))
+    def preguntar_artes(self):
+        respuesta = input("¿Te gustaría ? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en ")
+        else:
+            self.declare(Fact(pregunta=""))
+
+    #
+    @Rule(Fact(pregunta=""))
+    def preguntar_artes(self):
+        respuesta = input("¿Te gustaría ? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en ")
+        else:
+            self.declare(Fact(pregunta=""))
+
+    #
+    @Rule(Fact(pregunta=""))
+    def preguntar_artes(self):
+        respuesta = input("¿Te gustaría ? (s/n): ")
+        if respuesta.lower() == "s":
+            print("Podrías considerar una carrera en ")
         else:
             print("Necesitas explorar tus intereses con más detalle para obtener una recomendación precisa.")
 
